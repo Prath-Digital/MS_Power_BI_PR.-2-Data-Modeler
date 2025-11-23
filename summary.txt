@@ -1,0 +1,26 @@
+Data Model Summary
+
+Schema Type
+
+The project uses a Star Schema.
+Fact tables (Sales, Returns) are central and connect to shared
+dimensional tables such as Customer, Product, Region, and Date,
+This model provides fast aggregation and simple report-building.
+
+Relationship Rationale & Filter Flow
+
+-   Fact tables contain foreign keys linking to all dimensions.
+-   Dimensions store descriptive attributes for filtering and grouping.
+-   Relationships follow a 1-to-many pattern: Dimension (1) → Fact
+    (many).
+-   Filter direction flows from dimensions to fact tables.
+-   Shared dimensions ensure consistent cross-filtering between
+    Sales and Returns.
+
+Issues Encountered & Resolutions
+
+1. Date Format Error in Date table
+
+Problem: Power BI read date serial numbers as invalid Date values.
+Why: Excel doesn't had the date datatype; it had custom datatype in the date column; Power BI misinterpreted them.
+Fix: change the datatype to short date in excel
