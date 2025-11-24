@@ -7,23 +7,23 @@
 
 ## Repository Contents 📂
 - [README.md](README.md) — this file
-- [summary.txt](summary.txt) — concise project summary and troubleshooting notes �
+- [summary.txt](summary.txt) — concise project summary and troubleshooting notes 
 - [Data/](Data/) — source Excel files:
-  - [x] Customer_Dim.xlsx �
+  - [x] Customer_Dim.xlsx 
   - [x] Product_Dim.xlsx 🛍️
   - [x] Region_Dim.xlsx 🌍
   - [x] Date_Dim.xlsx 📆
-  - [x] Sales_Fact.xlsx �
-  - [x] Returns_Fact.xlsx �
+  - [x] Sales_Fact.xlsx 
+  - [x] Returns_Fact.xlsx 
 
 ## Quick Start ▶️
 1. Opened Power BI Desktop. 🖥️
 2. Get data → Excel → select files from [Data/]. 📁
-3. Used Power Query to clean and transform tables, then Close & Apply. �
-4. Built relationships in Model View following the Relationship & Modeling Guidelines below. �
-5. Used a Matrix visual for verification (no other visuals required). �
+3. Used Power Query to clean and transform tables, then Close & Apply. 
+4. Built relationships in Model View following the Relationship & Modeling Guidelines below. 
+5. Used a Matrix visual for verification (no other visuals required). 
 
-## Dataset Summary �
+## Dataset Summary 
 - Sales_Fact.xlsx
   - SalesID (PK), CustomerID (FK), ProductID (FK), RegionID (FK), DateKey (FK), Quantity, Revenue, Discount 💹
 - Returns_Fact.xlsx
@@ -45,7 +45,7 @@
 - Avoid unnecessary bidirectional filters; enable only when strictly justified. ⚖️
 
 ## Power Query & Data Prep 🧰
-- Imported via Power Query from [Data/]. �
+- Imported via Power Query from [Data/]. 
 - Clean steps: removed blank rows, set correct datatypes (ensure Date columns are real dates), trimmed text, normalized categories. 🧼
 - Set Data Categories (City, Country) and created hierarchies:
   - Date_Dim: Year > Quarter > Month > Date 🔢
@@ -56,7 +56,7 @@
 - Used a Matrix visual to validate:
   - Sales by Product Category and Region 🧾➡️🌍
   - Return reasons by Fiscal Year 🔁📆
-  - Revenue by Customer Segment �👥
+  - Revenue by Customer Segment 👥
 
 ## Deliverables 🧾
 - One .pbix file including:
@@ -66,15 +66,15 @@
 - Short summary (.docx / .txt) describing:
   - Schema type (star/snowflake) ⭐/❄️
   - Relationship rationale and filter flow 🔍
-  - Issues encountered and resolutions �️
-  - See [summary.txt](summary.txt) for current notes �
+  - Issues encountered and resolutions ️
+  - See [summary.txt](summary.txt) for current notes 
 
 ## Screenshots 🖼️
 
 ### Power Query Editor
 
 #### Query structure
-![Power Query Editor - Query Structure](Screenshots/Power%20Query%20Editor/Query%20Structure/image.png)
+![Power Query Editor - Query Structure](Screenshots/Power%20Query%20Editor/Query%20structure/image.png)
 
 #### Customer Table
 
@@ -123,14 +123,14 @@
 - Date parsing: Power BI misreads Excel date serials when Excel column datatype is not Date. Fix in Excel (Short Date) or enforce Date type in Power Query. (See issue noted in [summary.txt](summary.txt).) 🔧📅
 
 ## Contributors & Contact 🤝
-- Assigned by Business Analyst Manager (see [summary.txt](summary.txt)). �
-- For questions, attach sample screenshots and a short summary of steps taken. �
+- Assigned by Business Analyst Manager (see [summary.txt](summary.txt)). 
+- For questions, attach sample screenshots and a short summary of steps taken. 
 
 ## License 📜
 - This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. 🏷️
 
 ## References 🔗
-- Project notes: [summary.txt](summary.txt) �
+- Project notes: [summary.txt](summary.txt) 
 - Source data: [Data/](Data/) 📂
 
 ## **Data Dictionary** 🗂️
